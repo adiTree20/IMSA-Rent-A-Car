@@ -1,0 +1,80 @@
+<!-- Invoice HTML Page -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>IMSACars</title>
+        <link rel = "stylesheet" href= "style.css">
+        <script src="script.js"></script>
+	</head>
+
+	<body id="invoiceBody" onload="invoice()">
+
+        <br><br>
+		<div class="invoice-box">
+			<table id="invoiceTable" cellpadding="0" cellspacing="0">
+				<tr class="top">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td class="title">
+									<img src="assets/IMSAlogo.png" id="invoiceLogo"/>
+								</td>
+								<td id="invoiceDate"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="information">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td id="invoiceHomeAddress"></td>
+
+								<td id="invoicePersonalInfo"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Payment Method</td>
+
+					<td>Credit Card</td>
+				</tr>
+
+				<tr>
+					<td>Credit Card</td>
+
+					<td id="invoiceLastFour">**** </td>
+				</tr>
+
+				<tr>
+					<td>Item</td>
+
+					<td id="invoiceCarName"></td>
+				</tr>
+
+				<tr>
+					<td>Price per day</td>
+
+					<td id="invoicePPD">$</td>
+				</tr>
+
+				<tr>
+					<td>Number of years</td>
+
+					<td id="invoiceRentYears"></td>
+				</tr>
+
+				<tr>
+					<td>Total Price</td>
+
+					<td id="invoiceTotalPrice">$</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

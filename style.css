@@ -1,0 +1,579 @@
+/* CSS Stylesheet */
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.IMSAHeader {
+    background-image: linear-gradient(to right,teal 14%, rgb(153, 17, 216) 120%);
+}
+
+.highHeader {
+    color: black;
+    font-size: 50px;
+    float: right;
+    margin-right: 850px;
+    font-family: 'Luckiest Guy';
+}
+
+#myName {
+    color: black;
+    font-size: 30px;
+    float: right;
+    margin-right: 100px;
+    margin-top: -3.5%;
+    font-family: 'Bubblegum Sans';
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+header {
+    background-color: rgb(102, 150, 240);
+}
+
+#headerFont {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    height: 45px;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+nav {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 100px;
+    margin-right: 120px;
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    color: rgb(49, 48, 48);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav a::before {
+    display: block;
+    content: '';
+    height: 5px;
+    background-color: black;
+    
+    position: absolute;
+    width: 0%;
+    top: 0;
+    font-weight: 0;
+
+    transition: all ease-in-out 375ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+    font-weight: bold;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: goldenrod;
+}
+  
+#myBar {
+    height: 30px;
+    background-color: goldenrod;
+}
+
+.full {
+    background-color: brown;
+    height: 200px;
+}
+
+#luxuryHeader {
+    color: white;
+    position: absolute;
+    /* top: 20%; */
+    padding-left: 20px;
+    font-family: 'Audiowide';
+    font-size: 45px;
+    text-align: center;
+}
+
+.luxCars {
+    position: relative;
+    width: 437px;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: slid 25s linear infinite;
+    margin-right: 18%;
+    margin-top: 3%;
+    float: right;
+    animation-play-state: running;
+  }
+  
+.luxCars span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(350px);
+    /* display: block; */
+}
+.luxCars span img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+
+}
+.luxCars span figcaption {
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+    color: white;
+    text-align: center;
+}
+
+.luxCars span:hover img {
+    transform: translateY(-50px) scale(1.2);
+}
+
+#luxTable, .luxTh, .luxTd {
+    transition: 2s;
+    /* color: white; */
+    text-align: center;
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+    border-collapse: collapse;
+    font-family: 'Advent Pro';
+    color: white;
+    opacity: 0;
+}
+
+.luxTh {
+    font-size: 30px;
+    height: 90px;
+    width: 130px;
+}
+
+.luxTd {
+    font-size: 25px;
+}
+
+#chooseLuxCar {
+    position: absolute;
+    top: 44%;
+    left: 1.5%;
+    color: aqua;
+    font-size: 60px;
+    font-family: 'Bayon';
+    /* Image Source: https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/07/shutterstock_746328118.jpg?w=750 */
+    background-image: url('assets/chooseCarButton.png');
+    background-size: cover;
+    border-radius: 60px;
+    border-color: cyan;
+    height: 120px;
+    width: 500px;
+    -webkit-text-stroke: 2px black;
+}
+
+#currentLuxCar {
+    position: absolute;
+    top: 57%;
+    left: 4%;
+    color: gray;
+    opacity: 0;
+    font-size: 50px;
+    font-family: 'Faster One';
+}
+
+#economyHeader {
+    color: white;
+    position: absolute;
+    top: 17%;
+    left: 6%;
+    padding-left: 20px;
+    font-family: 'Audiowide';
+    font-size: 45px;
+    text-align: center;
+}
+
+.ecoCars {
+    position: relative;
+    width: 437px;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: slid 25s linear infinite;
+    margin-right: 18%;
+    margin-top: 3%;
+    float: right;
+    animation-play-state: running;
+  }
+  
+.ecoCars span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(350px);
+    /* display: block; */
+}
+.ecoCars span img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+
+}
+.ecoCars span figcaption {
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+    color: white;
+    text-align: center;
+}
+
+.ecoCars span:hover img {
+    transform: translateY(-50px) scale(1.2);
+}
+
+/* .luxCars span: img {} */
+
+@keyframes slid {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+#ecoTable, .ecoTh, .ecoTd {
+    transition: 2s;
+    /* color: white; */
+    text-align: center;
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+    border-collapse: collapse;
+    font-family: 'Advent Pro';
+    color: white;
+    opacity: 0;
+}
+
+.ecoTh {
+    font-size: 30px;
+    height: 90px;
+    width: 130px;
+}
+
+.ecoTd {
+    font-size: 25px;
+}
+
+#chooseEcoCar {
+    position: absolute;
+    top: 44%;
+    left: 1.5%;
+    color: aqua;
+    font-size: 60px;
+    font-family: 'Bayon';
+    /* Image Source: https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/07/shutterstock_746328118.jpg?w=750 */
+    background-image: url('assets/chooseCarButton.png');
+    background-size: cover;
+    border-radius: 60px;
+    border-color: cyan;
+    height: 120px;
+    width: 500px;
+    -webkit-text-stroke: 2px black;
+}
+
+#currentEcoCar {
+    position: absolute;
+    top: 57%;
+    left: 4%;
+    color: gray;
+    opacity: 0;
+    font-size: 50px;
+    font-family: 'Faster One';
+}
+
+
+#vehiclesLuxOrEco {
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    font-family: 'Gafata';
+    text-decoration: underline;
+}
+
+#vehiclesButtonsDiv {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.vehiclesButtons {
+    height: 300px;
+    width: 600px;
+    border-radius: 100px;
+    font-size: 50px;
+    font-family: 'Bayon';
+}
+
+#vehiclesLuxButton {
+    color: orange;
+    /* Image Source: https://www.123freevectors.com/gold-polygonal-abstract-background-design-vector-art-131298/ */
+    background-image: url("assets/GoldBackground.jpg");
+    background-size: cover;
+}
+
+#vehiclesEcoButton {
+    color: navy;
+    /* Image Source: https://www.istockphoto.com/photos/blue-abstract-background */
+    background-image: url("assets/BlueBackground.jpg");
+    background-size: cover;
+    margin-left: 100px;
+}
+
+
+#locationMapFigCaption {
+    color: black;
+    /* text-align: center; */
+    margin-left: 16%;
+    margin-top: -5%;
+    font-family: 'Bayon';
+    font-size: 20px;
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+#locationForm {
+    width: 500px;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    color: white;
+    font-family: 'Gafata';
+    font-size: 110%;
+}
+
+#homeAddress {
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+}
+
+.pickupTime {
+    width: 100px;
+}
+
+#locationSubmit {
+    width: 150px;
+    height: 75px;
+    border-radius: 20px;
+    font-family: 'Bayon';
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+#timeframeForm {
+    color: white;
+    font-family: 'Gafata';
+    font-size: 160%;
+    text-align: center;
+    width: 650px;
+    padding: 20px;
+    margin-left: 3%;
+}
+
+fieldset {
+    border-radius: 20px;
+    border-color: black;
+}
+
+#myCanvas {
+    float: right;
+    background-color: white;
+    margin-top: -37%;
+    margin-right: 5%;
+    width: 620px;
+    border: 5px solid white;
+    text-align: center;
+}
+
+#checkoutHeader {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#checkoutOrderAll {
+    display: flex;
+}
+
+.checkoutOrder {
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    height: 185px;
+    width: 100px;
+    flex: 1;
+    text-align: center;
+}
+
+#carTogether {
+    text-align: center;
+}
+
+#checkoutForm {
+    color: white;
+    font-family: 'Gafata';
+}
+
+#carImage {
+    width: 150px;
+}
+
+#locationTogether {
+    font-size: 10px;
+}
+
+#checkoutDivider {
+    border: 2px solid white;
+}
+
+#checkoutInputInfo {
+    display: flex;
+}
+
+.inputInfo {
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    height: 200px;
+    width: 100px;
+    flex: 1;
+    text-align: center;
+}
+
+#checkoutButtonDiv {
+    border: 2px solid black;
+}
+
+#checkoutButton {
+    width: 215px;
+    height: 215px;
+    border-radius: 20px;
+    font-family: 'Bayon';
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+
+    background-color: teal;
+}
+
+
+/* Invoice Style */
+
+#invoiceBody {
+    background-color: white;
+}
+
+.invoice-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #555;
+    margin-top: 150px;
+}
+
+#invoiceLogo {
+    width: 100%;
+    max-width: 300px;
+}
+
+#invoiceDate {
+    text-align: right;
+    margin-right: 10px;
+}
+
+#invoiceTable {
+    width: 800px;
+}
+
+.invoice-box td {
+    border: 1.5px solid black;
+    padding: 4px;
+}
+
+#invoiceDate {
+    width: 500px;
+    padding-right: 20px;
+}
+
+#invoiceHomeAddress {
+    padding: 10px;
+    width: 400px;
+}
+
+#invoicePersonalInfo {
+    padding: 10px;
+    width: 400px;
+}

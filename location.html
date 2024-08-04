@@ -1,0 +1,83 @@
+<!-- Location HTML Page -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMSACars</title>
+        <link rel = "stylesheet" href= "style.css">
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Gafata' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    </head>
+    <body onload="startPos()">
+        <div class="IMSAHeader">
+            <!-- Image Source: https://www.imsa.edu/ -->
+            <img src="assets/IMSAlogo.png" alt="logo" class="logo">
+            <label class="highHeader">IMSA Rent-a-Car</label>
+            <label id="myName">By: Aditya Prashanth | Web Tech | Mod 8</label>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="home.html" class="headerFont">&#9312; Vehicles</a></li>
+                        <li><a href="timeframe.html" class="headerFont">&#9313; Timeframe</a></li>
+                        <li><a href="location.html" class="headerFont" style="font-weight: 900; color: black">&#9314; Location</a></li>
+                        <li><a href="checkout.html" class="headerFont">&#9315; Checkout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+        <div id="locationMap">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1W-PMpOPAhO6KFHhTRXo-Zp_XMHMfJvI3" width="850" height="620"></iframe>
+            <figcaption id="locationMapFigCaption">Please look at the above map for locations</figcaption>
+        </div>
+
+        <div id="locationForm">
+            <form action="checkout.html">
+                <h2>Please fill out the following information below</h2>
+        
+                <fieldset>
+                    <label for="locationSelect">Location Pickup: </label><br>
+                    <input type="radio" id="locationIMSA" name="location" value="Illinois Mathematics and Science Academy | 1500 Sullivan Rd, Aurora, IL 60506" required>
+                    <label for="IMSA">Illinois Mathematics and Science Academy | 1500 Sullivan Rd, Aurora, IL 60506</label><br>
+                    <input type="radio" id="locationChicago" name="location" value="Chicago Midway International Airport | 5700 S Cicero Ave, Chicago, IL 60638">
+                    <label for="Chicago">Chicago Midway International Airport | 5700 S Cicero Ave, Chicago, IL 60638</label><br>
+                    <input type="radio" id="locationPeoria" name="location" value="General Wayne A. Downing Peoria International Airport | 6100 W Everett McKinley Dirksen Pkwy, Peoria, IL 61607">
+                    <label for="Peoria">General Wayne A. Downing Peoria International Airport | 6100 W Everett McKinley Dirksen Pkwy, Peoria, IL 61607</label><br>
+                    <input type="radio" id="locationChampaign" name="location" value="Champaign Public Library | 200 W Green St, Champaign, IL 61820">
+                    <label for="Champaign">Champaign Public Library | 200 W Green St, Champaign, IL 61820</label><br>
+                    <input type="radio" id="locationCarbondale" name="location" value="Carbondale Community High School | 1301 E Walnut St, Carbondale, IL 62901">
+                    <label for="Carbondale">Carbondale Community High School | 1301 E Walnut St, Carbondale, IL 62901</label><br><br>
+
+                    <label for="homeAddress">Home Address (with city, state, zipcode):</label>
+                    <input type="text" id="homeAddress" name="homeAddress" placeholder="1234 IMSA Ln, Aurora, Illinois, 60502" required><br><br>
+
+                    <label for="outsideState">Will you be traveling outside the state with this car?</label><br>
+                    <input type="radio" id="outsideStateYes" name="outsideState" value="Yes">
+                    <label for="outsideState">Yes</label><br>
+                    <input type="radio" id="outsideStateNo" name="outsideState" value="No">
+                    <label for="outsideState">No</label><br><br>
+
+                    <label for="outsideCountry">Will you be traveling outside the country with this car?</label><br>
+                    <input type="radio" id="outsideCountryYes" name="outsideCountry" value="Yes">
+                    <label for="outsideCountry">Yes</label><br>
+                    <input type="radio" id="outsideCountryNo" name="outsideCountry" value="No">
+                    <label for="outsideCountry">No</label><br><br>
+
+                    <button type="submit" value="Submit" id="locationSubmit" onclick="locationButton()">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

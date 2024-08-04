@@ -1,0 +1,50 @@
+<!-- 124167
+Web Tech Quarter 1 Project
+Using HTML, CSS, and JS
+With external CSS stylesheet and JS sheet
+September 24, 2021 -->
+
+<!-- Vehicles HTML Page -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMSACars</title>
+        <link rel = "stylesheet" href= "style.css">
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Gafata' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    </head>
+    <body onload="startPos()">
+        <div class="IMSAHeader">
+            <!-- Image Source: https://www.imsa.edu/ -->
+            <img src="assets/IMSAlogo.png" alt="logo" class="logo">
+            <label class="highHeader">IMSA Rent-a-Car</label>
+            <label id="myName">By: Aditya Prashanth | Web Tech | Mod 8</label>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="home.html" class="headerFont" style="font-weight: 900; color: black">&#9312; Vehicles</a></li>
+                        <li><a href="timeframe.html" class="headerFont">&#9313; Timeframe</a></li>
+                        <li><a href="location.html" class="headerFont">&#9314; Location</a></li>
+                        <li><a href="checkout.html" class="headerFont">&#9315; Checkout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header><br>
+
+        <h1 id="vehiclesLuxOrEco">Luxury Car or an Economy Car?</h1><br><br><br>
+
+        <div id="vehiclesButtonsDiv">
+            <button onclick="window.location.href='luxuryCars.html'" class="vehiclesButtons" id="vehiclesLuxButton">Luxury Cars</button>
+            <button onclick="window.location.href='economyCars.html'" class="vehiclesButtons" id="vehiclesEcoButton">Economy Cars</button>
+        </div>
+    </body>
+</html>

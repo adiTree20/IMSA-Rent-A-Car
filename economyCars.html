@@ -1,0 +1,82 @@
+<!-- Economy Cars HTML Page -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Luxury Cars</title>
+        <link rel = "stylesheet" href= "style.css">
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Faster One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+	</head>
+	<body onload="startPos(); removeEcoCar()">
+        <div class="IMSAHeader">
+            <!-- Image Source: https://www.imsa.edu/ -->
+            <img src="assets/IMSAlogo.png" alt="logo" class="logo">
+            <label class="highHeader">IMSA Rent-a-Car</label>
+            <label id="myName">By: Aditya Prashanth | Web Tech | Mod 8</label>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="home.html" class="headerFont" style="font-weight: 900; color: black">&#9312; Vehicles</a></li>
+                        <li><a href="timeframe.html" class="headerFont">&#9313; Timeframe</a></li>
+                        <li><a href="location.html" class="headerFont">&#9314; Location</a></li>
+                        <li><a href="checkout.html" class="headerFont">&#9315; Checkout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        
+        <div class="full">
+
+            <h1 id="economyHeader">Choose Your<br>Economy Car<br>Right Here!</h1><br><br>
+            
+            <div class="ecoCars">
+                <span style="--i:1;" class="ecoCarSpan">
+                    <!-- Image Source: https://www.edmunds.com/toyota/yaris/ -->
+                    <img src="assets/Toyota.jpg" id="toyota" alt="Toyota Yaris" onclick="ecoPausePlay(this.id, 'ecoCars')">
+                    <figcaption>Toyota Yaris</figcaption>
+                </span>
+                <span style="--i:2;" class="ecoCarSpan">
+                    <!-- Image Source: https://www.edmunds.com/hyundai/accent/ -->
+                    <img src="assets/Hyundai.png" id="hyundai" alt="Hyundai Accent" onclick="ecoPausePlay(this.id, 'ecoCars')">
+                    <figcaption>Hyundai Accent</figcaption>
+                </span>
+                <span style="--i:3;" class="ecoCarSpan">
+                    <!-- Image Source: https://www.edmunds.com/nissan/versa/ -->
+                    <img src="assets/Nissan.jpg" id="nissan" alt="Nissan Versa" onclick="ecoPausePlay(this.id, 'ecoCars')">
+                    <figcaption>Nissan Versa</figcaption>
+                </span>
+                <span style="--i:4;" class="ecoCarSpan">
+                    <!-- Image Source: https://www.edmunds.com/honda/civic/ -->
+                    <img src="assets/Honda.jpg" id="honda" alt="Honda Civic" onclick="ecoPausePlay(this.id, 'ecoCars')">
+                    <figcaption>Honda Civic</figcaption>
+                </span>
+                <span style="--i:5;" class="ecoCarSpan">
+                    <!-- Image Source: https://www.edmunds.com/kia/forte/ -->
+                    <img src="assets/Kia.png" id="kia" alt="Kia Forte" onclick="ecoPausePlay(this.id, 'ecoCars')">
+                    <figcaption>Kia Forte</figcaption>
+                </span>
+            </div>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <table id="ecoTable"></table>
+
+        <h2 id="currentEcoCar"></h2>
+        <button id="chooseEcoCar" onclick="luxandecoButton()">Choose this Car!</button>
+	</body>
+</html>

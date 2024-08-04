@@ -1,0 +1,83 @@
+<!-- Luxury Cars HTML Page -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Luxury Cars</title>
+        <link rel = "stylesheet" href= "style.css">
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Faster One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+	</head>
+	<body onload="startPos(); removeLuxCar()">
+        <div class="IMSAHeader">
+            <!-- Image Source: https://www.imsa.edu/ -->
+            <img src="assets/IMSAlogo.png" alt="logo" class="logo">
+            <label class="highHeader">IMSA Rent-a-Car</label>
+            <label id="myName">By: Aditya Prashanth | Web Tech | Mod 8</label>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="home.html" class="headerFont" style="font-weight: 900; color: black">&#9312; Vehicles</a></li>
+                        <li><a href="timeframe.html" class="headerFont">&#9313; Timeframe</a></li>
+                        <li><a href="location.html" class="headerFont">&#9314; Location</a></li>
+                        <li><a href="checkout.html" class="headerFont">&#9315; Checkout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        
+        <div class="full">
+
+            <h1 id="luxuryHeader">Choose Your Luxury<br>Car Right Here!</h1><br><br>
+            
+            <div class="luxCars">
+                <span style="--i:1;" class="luxCarSpan">
+                    <!-- Image Source: https://www.indianluxurytrains.com/blog/top-5-most-expensive-cars-in-world/ -->
+                    <img src="assets/Lamborghini.jpg" id="lambo" alt="Lamborghini Veneno" onclick="luxPausePlay(this.id, 'luxCars')">
+                    <figcaption>Lamborghini Veneno</figcaption>
+                </span>
+                <span style="--i:2;" class="luxCarSpan">
+                    <!-- Image Source: https://www.tesla.com/modelx -->
+                    <img src="assets/Tesla.jfif" id="tesla" alt="Tesla Model X" onclick="luxPausePlay(this.id, 'luxCars')">
+                    <figcaption>Tesla Model X</figcaption>
+                </span>
+                <span style="--i:3;" class="luxCarSpan">
+                    <!-- Image Source: https://www.indianluxurytrains.com/blog/top-5-most-expensive-cars-in-world/ -->
+                    <img src="assets/Ferrari.jpg" id="ferrari" alt="Ferrari LaFerrari" onclick="luxPausePlay(this.id, 'luxCars')">
+                    <figcaption>Ferrari LaFerrari</figcaption>
+                </span>
+                <span style="--i:4;" class="luxCarSpan">
+                    <!-- Image Source: https://www.caranddriver.com/bugatti/divo -->
+                    <img src="assets/Bugatti.jpg" id="bugatti" alt="Bugatti Divo" onclick="luxPausePlay(this.id, 'luxCars')">
+                    <figcaption>Bugatti Divo</figcaption>
+                </span>
+                <span style="--i:5;" class="luxCarSpan">
+                    <!-- Image Source: https://www.guideautoweb.com/en/makes/mercedes-benz/gle/2021/ -->
+                    <img src="assets/MercedesBenz.jpg" id="mercedesbenz" alt="Mercedes-Benz GLE" onclick="luxPausePlay(this.id, 'luxCars')">
+                    <figcaption>Mercedes-Benz GLE</figcaption>
+                </span>
+            </div>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <table id="luxTable"></table>
+
+        <h2 id="currentLuxCar"></h2>
+        <button id="chooseLuxCar" onclick="luxandecoButton()">Choose this Car!</button>
+
+	</body>
+</html>

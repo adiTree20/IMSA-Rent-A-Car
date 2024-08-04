@@ -1,0 +1,70 @@
+<!-- Timeframe HTML Page -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IMSACars</title>
+        <link rel = "stylesheet" href= "style.css">
+        <script src="script.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bayon' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Gafata' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    </head>
+    <body onload="startPos(); timeframeCanvas()">
+        <div class="IMSAHeader">
+            <!-- Image Source: https://www.imsa.edu/ -->
+            <img src="assets/IMSAlogo.png" alt="logo" class="logo">
+            <label class="highHeader">IMSA Rent-a-Car</label>
+            <label id="myName">By: Aditya Prashanth | Web Tech | Mod 8</label>
+        </div>
+
+        <header>
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="home.html" class="headerFont">&#9312; Vehicles</a></li>
+                        <li><a href="timeframe.html" class="headerFont" style="font-weight: 900; color: black">&#9313; Timeframe</a></li>
+                        <li><a href="location.html" class="headerFont">&#9314; Location</a></li>
+                        <li><a href="checkout.html" class="headerFont">&#9315; Checkout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+        <div id="timeframeForm">
+            <form action="location.html">
+                <h2>Please fill out the<br>following information below</h2>
+
+                <fieldset>
+                    <label for="date">Choose a date you will rent-a-car: </label>
+                    <input type="date" id="timeframeDate" name="date" required><br><br>
+
+                    <label for="pickupTime">Approximate Pick Up Time: </label>
+                    <input type="time" id="pickupTime" name="pickupTime" placeholder="" required><br><br>
+
+                    <label for="timeLength">Number of years will you rent this car: </label><br>
+                    <input type="radio" id="oneYear" name="timeLength" value="1 Year" required>
+                    <label for="oneYear">1 Year</label><br>
+                    <input type="radio" id="twoYears" name="timeLength" value="2 Years">
+                    <label for="twoYears">2 Years</label><br>
+                    <input type="radio" id="threeYears" name="timeLength" value="3 Years">
+                    <label for="threeYears">3 Years</label><br>
+                    <input type="radio" id="fourYears" name="timeLength" value="4 Years">
+                    <label for="fourYears">4 Years</label><br><br>
+
+                    <button type="submit" value="Submit" id="locationSubmit" onclick="timeframeButton()">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Image Source: https://www.softwarepundit.com/seo/social-media-holiday-calendar-2020 -->
+        <canvas id="myCanvas" height="500px" width="500px"></canvas>
+    </body>
+</html>
